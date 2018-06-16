@@ -1,0 +1,133 @@
+/* CSS Document */
+
+
+#logo img {
+	max-width: 45%;
+	margin-top: -20%;
+	margin-left:25%;;
+	height: auto !important;
+}
+
+body
+{
+	background-image:url(../../img/carousel1_desktop.jpg);
+	background-size:100%;
+}
+
+
+@media screen and (min-width: 660px) {
+
+  /**********************************
+  HEADER
+  ***********************************/
+
+body
+{
+	background-image:url(../../img/carousel1_desktop.jpg);
+	background-size:100%;
+}
+
+
+#logo img{
+   float: left;
+   margin-left: 5%;
+   text-align: left;
+   max-width: 50%;
+   margin-top:0;
+   
+  }
+  
+.navbar-custom 
+ {
+	height: 100px;
+    color:#ffffff;
+    border-radius:0;
+	background: rgba(0,0,0,0.4);
+	
+}
+.navbar-custom-down {
+		padding-top:30px;
+		margin-left: 160px;
+		padding-left:200px;
+}
+
+.navbar.transparent.navbar-inverse .navbar-inner {
+   background: rgba(0,0,0,0.4);
+}
+
+.textcolor
+{
+	color:#fff;
+	
+}
+
+.nav a
+{
+	background: rgba(0,0,0,0);
+}
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:4px !important; 
+    padding-bottom:0 !important;
+    height: 32px;
+}
+.navbar {min-height:32px !important;}
+
+
+.navbar-default {
+    background-color: #F8F8F8;
+    border-color: #E7E7E7;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #777777;
+}
+.navbar .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar.navbar-nav > .active > a:focus,
+.navbar.navbar-nav > a:visited {
+    background-color: #1D4094;
+    color: #fff;
+}
+
+ul li
+{
+	font-size:1.1em;
+	
+}
+
+ul.nav li a, ul.nav li a:visited {
+    color: #fff !important;
+}
+
+ul.nav li a:hover, ul.nav li a:active {
+	background-color: #1D4094 !important;
+}
+
+ul.nav li.active a {
+    color: #fff !important;
+}
+
+.loginButton a
+{
+	margin-top:30px;
+	margin-left:10px;
+	text-align:justify;
+	width: 170px;
+	background-color: #509236 !important;
+	color: #FFF;
+}
+
+.container2
+{
+	margin-top:25px;
+
+}
+
+.container3
+{
+	margin-top:-20px;
+}
+
+h3
+{
+	padding:0;
+	margin:0;
+}

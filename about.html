@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 8]>   <html lang="en" class="nojs lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>      <html lang="en" class="nojs lt-ie10 lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>      <html lang="en" class="nojs lt-ie10 ie9-or-better ie9"> <![endif]-->
+<!--[if ! IE]><!-->
+<html lang="en" class="nojs ie9-or-better ie10-or-better">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <!--
+    <meta http-equiv="X-UA-Compatible" content="IE=10"/><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"bac4fc8811","applicationID":"19245175","transactionName":"bwFXZkJRD0sDV00PW1ZLeGRzHyVdBFVMCkBoBVJXc18PTBBbVQpRSktcXFRVGQ==","queueTime":0,"applicationTime":131,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- favicon -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>About us | Metro Bank</title> 
+    <link href="/about-us/" rel="canonical" />
+    
+
+ 
+    <link type="text/css" rel="stylesheet" href="./index_files/styles.css">
+
+    
+
+
+
+
+
+</head>
+
+<body data-mapkey="AIzaSyAdchFRz9gQA5OXTTTjbSwDcRy2ATxIjSI" class="">
+    <!-- accessibility skip link -->
+    <a href="#skipToContent" class="u-offscreen">Skip to main content</a> 
+    
+    
+    <div class="container">
+<header class="header header_hero">
+    <nav class="header-topNav header-topNav_hero">
+        <div class="header-topNav-contents header-topNav-contents_hero">
+            <div class="header-topNav-nav header-topNav-nav_hero">
+                <div class="horizontalDragSlider horizontalDragSlider_header horizontalDragSlider_header_hero">
+                    
+                    <ul class="horizontalDragSlider-content horizontalDragSlider-content_header horizontalDragSlider-content_header_hero">
+
+                            <li class="header-topNav-list-item header-topNav-list-item_hero ">
+                                <a class="header-topNav-list-item-link header-topNav-list-item_hero " href="/" target="">Personal</a>
+                            </li>
+                            <li class="header-topNav-list-item header-topNav-list-item_hero ">
+                                <a class="header-topNav-list-item-link header-topNav-list-item_hero " href="/business/" target="">Business</a>
+                            </li>
+                            <li class="header-topNav-list-item header-topNav-list-item_hero header-topNav-list-item_current horizontalDragSlider-initial">
+                                <a class="header-topNav-list-item-link header-topNav-list-item_hero header-topNav-list-item-link_current" href="/about-us/" target="">About us</a>
+                            </li>
+                            <li class="header-topNav-list-item header-topNav-list-item_hero ">
+                                <a class="header-topNav-list-item-link header-topNav-list-item_hero " href="/investor-relations/" target="">Investor Relations</a>
+                            </li>
+
+                    </ul>
+                    <span class="horizontalDragSlider-more horizontalDragSlider-more_header horizontalDragSlider-more_header_hero"></span>
+                </div>
+            </div>
+            <div class="header-topNav-util header-topNav-util_hero" style="width: 470px;">
+
+        <a class="header-link " href="/store-locator/" target="_self">
+            <span class="link-icon icon-store"></span>
+            <span class="link-text">Find a Store</span>
+        </a>
+        <a class="header-link " href="/help-and-support/" target="_self">
+            <span class="link-icon icon-help"></span>
+            <span class="link-text">Help</span>
+        </a>
+    
+        <div class="header-login">
+            <a href="bank/login.php"> <button class="header-login-btn js-header-loginDropdownToggle" aria-haspopup="true" aria-expanded="false">Log in<span></span></button> </a>
+            <div class="header-login-dropdown" aria-hidden="true">
+                <div class="header-login-dropdown-triangle" aria-hidden="true"></div>
+                <ul class="header-login-dropdown-list">
+                        <li class="header-login-dropdown-item">
+                            <a class="header-login-dropdown-link" href="#">Personal and Business</a>
+                        </li>
+                        <li class="header-login-dropdown-item">
+                            <a class="header-login-dropdown-link" href="#" target="_top">Business Online Plus</a>
+                        </li>
+                        <li class="header-login-dropdown-item">
+                            <a class="header-login-dropdown-link" href="#" target="_top">Commercial Online Banking</a>
+                        </li>
+                        <li class="header-login-dropdown-item">
+                            <a class="header-login-dropdown-link" href="#">Register and update your details</a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+            <div class="header-search-btn-container">
+            <button class="header-search-btn js-header-searchDropdownToggle ">
+                <span class="u-offscreen">Open Search</span>
+                <span class="icon"></span>
+            </button>
+            <div class="header-search-dropdown" aria-hidden="true">
+                <div class="header-search-dropdown-triangle" aria-hidden="true"></div>
+                <ul class="header-search-dropdown-list">
+                    <li class="header-search-dropdown-item">
+                        <span class="link-icon icon-help"></span>
+                        <a class="header-search-dropdown-link" href="/help-and-support/">Help</a>
+                    </li>
+                    <li class="header-search-dropdown-item">
+                        <span class="link-icon icon-store"></span>
+                        <a class="header-search-dropdown-link" href="/store-locator/">Find a Store</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+}
+</div>        
+        </div>
+    </nav>
+    <form method="GET" class="header-search header-search_hero">
+        <div class="header-search-inner header-search-inner_hero" aria-expanded="false">
+            <label for="header-search" class="u-offscreen"></label>
+            <input id="header-search" type="search" class="header-search-field header-search-field_hero" name="query" />
+            <button type="submit"></button>
+        </div>
+    </form>
+    <div class="header-container header-container_hero">
+        <a class="header-logo header-logo_hero" href="/">
+            <span class="u-offscreen">Metro Bank</span>
+        </a>
+
+    </div>
+</header>        
+<div class="l-container l-container_size_100">
+    <div><div class='l-row l-row_size_100'><div class="l-cell l-cell_size_100 ">
+
+
+<div class="hero hero_full hero_bgPosX_fullRight hero_bgPosY_middle" style="background-image: url('./imgs/instore_colleague_7.jpg');">
+    <div class="hero_full-content hero-content l-container-wrap">
+        <div class="hero_full-content-inner hero-content-inner">
+            <h1 class="hero-headline">our brief but brilliant history</h1>
+
+
+            
+
+
+
+            <a href="#heroend" class="icon icon-arrow">
+                Scroll down
+            </a>
+        </div>
+    </div>
+</div>
+<div id="heroend"></div></div></div></div>
+    <div id="skipToContent"  tabindex="-1"></div>
+    <div><div class='l-container-wrap'><div class='l-row l-row_size_100'><div class="l-cell l-cell_size_100 ">
+<div class="headerIntroBlock headerIntroBlock-text_black  " id="">
+
+        <h2 class="headerIntroBlock-header">
+            Changing the way Britain banks
+        </h2>
+            <div class="headerIntroBlock-intro">
+            <p>We’ve built a different kind of high street bank. A bank with stores that are open when it suits you, 7 days a week. A bank where you can walk in without an appointment and walk out with a working account, debit card and all. A bank that tells you exactly what you’re getting, in language that actually makes sense. A bank that puts you first.</p>
+        </div>
+</div></div></div></div><div class='l-container-wrap'><div class='l-row l-row_size_33_33_33'><div class="l-cell l-cell_size_33 ">
+<div class="contentBlock contentBlock_default" id="">
+    <div class="contentBlock_default-content">
+        <div class="contentBlock_default-imgContainer mask_circle" title="A fresh start to banking">
+            
+
+
+    <img src='./imgs/balloons-red.png' alt='Metro Bank Red Balloons' class="contentBlock_default-img" />
+
+        </div>
+
+        <h2 class="contentBlock_default-header">A fresh start to banking</h2>
+        <div class="contentBlock_default-text">
+            <div class="wysiwyg">
+                <p>Metro Bank first opened its doors in the summer of 2010, the first high street bank to open in the UK in over 100 years.&nbsp;</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+</div></div><div class="l-cell l-cell_size_33 ">
+<div class="contentBlock contentBlock_default" id="">
+    <div class="contentBlock_default-content">
+        <div class="contentBlock_default-imgContainer mask_circle" title="Bringing personal service back to banking">
+            
+
+
+    <img src='./imgs/him_metro-.png' alt='Metro M Pin Male Version ' class="contentBlock_default-img" />
+
+        </div>
+
+        <h2 class="contentBlock_default-header">Bringing personal service back to banking</h2>
+        <div class="contentBlock_default-text">
+            <div class="wysiwyg">
+                <p>Every store is open 7 days a week, and from 8am–8pm on weekdays. No need to book an appointment, just walk in at a time that is right for you.</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+</div></div><div class="l-cell l-cell_size_33 ">
+<div class="contentBlock contentBlock_default" id="">
+    <div class="contentBlock_default-content">
+        <div class="contentBlock_default-imgContainer mask_circle" title="Banking. But better">
+            
+
+
+    <img src='./imgs/metro-man-red.png' alt='Metro man mascot red icon' class="contentBlock_default-img" />
+
+        </div>
+
+        <h2 class="contentBlock_default-header">Banking. But better</h2>
+        <div class="contentBlock_default-text">
+            <div class="wysiwyg">
+                <p>We keep our products simple and we do the same for our rates and charges, so you’ll always know exactly what you’re getting. No more nasty surprises in the small print.</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+</div></div></div></div><div class='l-row l-row_size_100'><div class="l-cell l-cell_size_100 ">
+<div class="messageBlock messageBlock_blue" id="Awards">
+    <div class="messageBlock-inner">
+        <div class="messageBlock-content l-container-wrap">
+            <h2 class="messageBlock-title messageBlock-title_iconsCollection">AWARD-WINNING SERVICE</h2>
+            
+
+            <div class="messageBlock-iconsCollection" data-matchheight=".messageBlock-iconsCollection-item" >
+                        <div class="messageBlock-iconsCollection-item">
+                            
+<div class="messageBlock-iconsCollection-item-content">
+    <div class="messageBlock-iconsCollection-item-icon" title="Most Trusted Current Account Provider 2017">
+        
+
+
+    <img src='./imgs/moneywise_logo-4.png' alt='' class="" />
+
+    </div>
+    <h3 class="messageBlock-iconsCollection-item-text">Most Trusted Current Account Provider 2017</h3>
+</div>
+
+
+    <div  class="messageBlock-iconsCollection-item-button">
+        <a class="btn btn_red"  href="/about-us/awards/">All our awards</a>
+    </div>
+
+                        </div>
+                        <div class="messageBlock-iconsCollection-item">
+                            
+<div class="messageBlock-iconsCollection-item-content">
+    <div class="messageBlock-iconsCollection-item-icon" title="Most Trusted Financial Provider 2017">
+        
+
+
+    <img src='./imgs/moneywise_logo-4.png' alt='' class="" />
+
+    </div>
+    <h3 class="messageBlock-iconsCollection-item-text">Most Trusted Financial Provider 2017</h3>
+</div>
+
+
+    <div  class="messageBlock-iconsCollection-item-button">
+        <a class="btn btn_red"  href="/about-us/awards/">All our awards</a>
+    </div>
+
+                        </div>
+                        <div class="messageBlock-iconsCollection-item">
+                            
+<div class="messageBlock-iconsCollection-item-content">
+    <div class="messageBlock-iconsCollection-item-icon" title="Most Trusted Savings &amp; Cash ISA Provider 2017">
+        
+
+
+    <img src='./imgs/moneywise_logo-4.png' alt='' class="" />
+
+    </div>
+    <h3 class="messageBlock-iconsCollection-item-text">Most Trusted Savings &amp; Cash ISA Provider 2017</h3>
+</div>
+
+
+    <div  class="messageBlock-iconsCollection-item-button">
+        <a class="btn btn_red"  href="#">All our awards</a>
+    </div>
+
+                        </div>
+            </div>
+        </div>
+    </div>
+</div></div></div><div class='l-container-wrap'><div class='l-row l-row_size_100'><div class="l-cell l-cell_size_100 ">
+<div class="headerIntroBlock headerIntroBlock-text_black  " id="">
+
+        <h2 class="headerIntroBlock-header">
+            What we&#39;re all about
+        </h2>
+            <div class="headerIntroBlock-intro">
+            <p><span style="font-size: 1rem; line-height: 1.5;">We're committed to making a difference and delivering a different type of banking for Britain.</span></p>
+        </div>
+</div></div></div></div><div class='l-container-wrap'><div class='l-row l-row_size_33_33_33'><div class="l-cell l-cell_size_33 ">
+<div class="contentBlock contentBlock_default" id="">
+    <div class="contentBlock_default-content">
+        <div class="contentBlock_default-imgContainer mask_circle" title="Committed to customer service">
+            
+
+
+    <img src='./imgs/awards_2.png' alt='Metro Awards icon version 1' class="contentBlock_default-img" />
+
+        </div>
+
+        <h2 class="contentBlock_default-header">Committed to customer service</h2>
+        <div class="contentBlock_default-text">
+            <div class="wysiwyg">
+                <p>We are committed to providing you with unparalleled levels of service and convenience. This is why our stores are open 7 days a week, and from 8am to 8pm on weekdays. We offer a super-quick account opening, on the spot card printing as well as a 24/7 London-based contact centre.</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+</div></div><div class="l-cell l-cell_size_33 ">
+<div class="contentBlock contentBlock_default" id="">
+    <div class="contentBlock_default-content">
+        <div class="contentBlock_default-imgContainer mask_circle" title="Committed to the community">
+            
+
+
+    <img src='./imgs/heart.png' alt='' class="contentBlock_default-img" />
+
+        </div>
+
+        <h2 class="contentBlock_default-header">Committed to the community</h2>
+        <div class="contentBlock_default-text">
+            <div class="wysiwyg">
+                <p>It's really important to us that we give something back to the communities we serve. Every year we host thousands of charity and business networking events across our stores.&nbsp;We’re proud to partner with two leading charities&nbsp;to help combat dementia and promote children’s mental wellbeing. </p>
+            </div>
+        </div>
+    </div>
+    
+
+
+</div></div><div class="l-cell l-cell_size_33 ">
+<div class="contentBlock contentBlock_default" id="">
+    <div class="contentBlock_default-content">
+        <div class="contentBlock_default-imgContainer mask_circle" title="Committed to kids">
+            
+
+
+    <img src='./imgs/lollies-2.png' alt='Metro bank lollies icon' class="contentBlock_default-img" />
+
+        </div>
+
+        <h2 class="contentBlock_default-header">Committed to kids</h2>
+        <div class="contentBlock_default-text">
+            <div class="wysiwyg">
+                <p>Kids matter at Metro Bank. Every year we help thousands of children take their first steps with money. We encourage them to save and count their coins using our Magic Money Machines and learn about budgeting with our financial education programme.</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+</div></div></div></div><div class='l-container-wrap'><div class='l-row l-row_size_100'><div class="l-cell l-cell_size_100 ">
+<div class="headerIntroBlock headerIntroBlock-text_black  " id="">
+
+        <h2 class="headerIntroBlock-header">
+            Explore Metro Bank
+        </h2>
+            <div class="headerIntroBlock-intro">
+            <p>We want to keep banking simple so our products and services are as straightforward as possible.</p>
+        </div>
+</div></div></div></div><div class='l-container-wrap'><div class='l-row l-row_size_50_50'><div class="l-cell l-cell_size_50 ">
+<div class="contentBlock contentBlock_colourBar contentBlock_colourBar_purple" id="">
+    <div class="contentBlock_colourBar-imgContainer" >
+        <div class="contentBlock_colourBar-img" style="background-image: url('/imgs/sdb.jpg')"></div>
+    </div>
+
+    <h2 class="contentBlock_colourBar-header">OUR SERVICES</h2>
+    <h3 class="contentBlock_colourBar-subheader">Safe deposit boxes</h3>
+    <div class="contentBlock_colourBar-text">
+        <div class="wysiwyg">
+            <p>Store your valuables and important documents in a safe and secure environment. We offer different size boxes from extra small to extra large.</p>
+        </div>
+    </div>
+    
+
+    <div  class="contentBlock_colourBar-cta contentBlock-cta">
+        <a class="contentBlock-cta-link"  href="/safe-deposit-boxes/">Safe Deposit Boxes</a>
+    </div>
+
+</div>
+
+
+
+
+</div><div class="l-cell l-cell_size_50 ">
+<div class="contentBlock contentBlock_colourBar contentBlock_colourBar_red" id="">
+    <div class="contentBlock_colourBar-imgContainer" >
+        <div class="contentBlock_colourBar-img" style="background-image: url('/imgs/r_colleague_business.jpg')"></div>
+    </div>
+
+    <h2 class="contentBlock_colourBar-header">BANKING WITH US</h2>
+    <h3 class="contentBlock_colourBar-subheader">Brilliant business banking</h3>
+    <div class="contentBlock_colourBar-text">
+        <div class="wysiwyg">
+            <p>From sole traders to large corporations, there’s an account to fit your needs. And there’s a Local Business Manager in every store. See what we can do for your business.</p>
+        </div>
+    </div>
+    
+
+    <div  class="contentBlock_colourBar-cta contentBlock-cta">
+        <a class="contentBlock-cta-link"  href="/business/">Business Banking</a>
+    </div>
+
+</div>
+
+
+
+
+</div></div></div><div class='l-container-wrap'><div class='l-row l-row_size_50_50'><div class="l-cell l-cell_size_50 ">
+<div class="contentBlock contentBlock_colourBar contentBlock_colourBar_green" id="">
+    <div class="contentBlock_colourBar-imgContainer" >
+        <div class="contentBlock_colourBar-img" style="background-image: url('/imgs/r_switching.jpg')"></div>
+    </div>
+
+    <h2 class="contentBlock_colourBar-header">LOVE YOUR BANK</h2>
+    <h3 class="contentBlock_colourBar-subheader">Account switching</h3>
+    <div class="contentBlock_colourBar-text">
+        <div class="wysiwyg">
+            <p>Switching your current account to Metro Bank is simple and easy. And we guarantee to have it done in 7 days.</p>
+        </div>
+    </div>
+    
+
+    <div  class="contentBlock_colourBar-cta contentBlock-cta">
+        <a class="contentBlock-cta-link"  href="#">How to switch</a>
+    </div>
+
+</div>
+
+
+
+
+</div><div class="l-cell l-cell_size_50 ">
+<div class="contentBlock contentBlock_colourBar contentBlock_colourBar_purple" id="">
+    <div class="contentBlock_colourBar-imgContainer" >
+        <div class="contentBlock_colourBar-img" style="background-image: url('/imgs/legal-information/fscs-badge.png')"></div>
+    </div>
+
+    <h2 class="contentBlock_colourBar-header">FSCS</h2>
+    <h3 class="contentBlock_colourBar-subheader">Protecting your money</h3>
+    <div class="contentBlock_colourBar-text">
+        <div class="wysiwyg">
+            <p>Your eligible deposits with Metro Bank are protected by the FSCS.</p>
+        </div>
+    </div>
+    
+
+    <div  class="contentBlock_colourBar-cta contentBlock-cta">
+        <a class="contentBlock-cta-link" target='_blank' title='How FSCS protects your money (Opens in new window)' href="#">How FSCS protects your money</a>
+    </div>
+
+</div>
+
+
+
+
+</div></div></div></div>
+</div>
+<footer class="footer edge_top_reverse l-container l-container_size_100">
+    <div class="l-container-wrap">
+        <div class="footer-primaryLinksContainer">
+            <ul class="footer-primaryLinks" >
+                    <li class="item">
+                        <a class="text" href="#"><span>Store Locator</span></a>
+                    </li>
+                    <li class="item">
+                        <a class="text" href="#"><span>Careers</span></a>
+                    </li>
+                    <li class="item">
+                        <a class="text" href="#"><span>Press</span></a>
+                    </li>
+                    <li class="item">
+                        <a class="text" href="#"><span>Mortgage Intermediaries</span></a>
+                    </li>
+                    <li class="item">
+                        <a class="text" href="#"><span>Investor Relations</span></a>
+                    </li>
+                    <li class="item">
+                        <a class="text" target="_blank" href="#"><span>Modern Slavery Act (PDF)</span></a>
+                    </li>
+            </ul>
+            <div class="footer-socialMediaContainer">
+                <ul class="footer-socialMedia" >
+                        <li class="footer-socialMedia-item">
+                            <a href="#-" class="footer-socialMedia-icon" target="_blank">
+</a>
+                        </li>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="footer-smallPrint">
+            <div class="wysiwyg">
+                <p class="wysiwyg-text-small">Your eligible deposits with Metro Bank PLC are protected up to a total of £85,000 by the Financial Services Compensation Scheme, the UK's deposit guarantee scheme. Any deposits you hold above the limit are unlikely to be covered. For further information visit </p>
+<p class="wysiwyg-text-small">Metro Bank PLC. Registered in England and Wales. Company number: 6419578. Registered office: One Southampton Row, London, WC1B 5HA. We are authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and Prudential Regulation Authority. Metro Bank PLC is an independent UK Bank - it is not affiliated with any other bank or organisation (including the METRO newspaper or its publishers) anywhere in the world. "Metrobank" is the registered trademark of Metro Bank PLC.</p>
+            </div>
+        </div>
+
+        <ul class="footer-awards" >
+
+                <li class="footer-award footer-award_award1">
+                    
+
+
+    <img src='./imgs/moneywise-logo---transparent.png' alt='' class="footer-award-logo" />
+
+                    <span class="footer-award-text">Most Trusted Financial Provider 2017</span>
+                </li>
+                <li class="footer-award">
+                    
+
+
+    <img src='./imgs/moneywise-logo---transparent.png' alt='' class="footer-award-logo" />
+
+                    <span class="footer-award-text">Most Trusted Current Account Provider 2017</span>
+                </li>
+                <li class="footer-award">
+                    
+
+
+    <img src='./imgs/moneynet-1.png' alt='' class="footer-award-logo" />
+
+                    <span class="footer-award-text">Moneynet Awards 2018: Best All Round Personal Finance Provider</span>
+                </li>
+        </ul>
+        <div class="footer-secondaryLinksContainer">
+            <ul class="footer-secondaryLinks" >
+                    <li class="item">
+                        <a class="text" href="#">Accessibility</a>
+                    </li>
+                    <li class="item">
+                        <a class="text" href="#">Legal Information</a>
+                    </li>
+                    <li class="item">
+                        <a class="text" href="#">Privacy and Security</a>
+                    </li>
+                    <li class="item">
+                        <a class="text" href="#">Sitemap</a>
+                    </li>
+            </ul>
+
+            <small class="footer-copyright">
+                Copyright 2018 Metro Bank. All rights reserved
+            </small>
+        </div>
+    </div>
+</footer>    </div>
+
+    
+    
+</body>
+</html>
